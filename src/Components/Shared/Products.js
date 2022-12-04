@@ -1,5 +1,5 @@
 
-export const PRODUCTS =
+export  const  PRODUCTS =
 [
     {
         "id": 0,
@@ -103,20 +103,20 @@ export const PRODUCTS =
 	{
         "id": 11,
         "brand": "SamSung",
-        "product": "Galaxy A33",
+        "product": "Galaxy A73 5G",
         "color": "White",
         "GB": "128GB",
         "price": 2270,
-        "images" : "./Assets/Images/samsung_Galaxy_A33.png"
+        "images" : "./Assets/Images/Samsung_A73_white.png"
     },
 	{
         "id": 12,
         "brand": "SamSung",
-        "product": "Galaxy A42 5G",
+        "product": "Galaxy A73 5G",
         "color": "Black",
         "GB": "128GB",
         "price": 2390,
-        "images" : "./Assets/Images/samsung_black.png"
+        "images" : "./Assets/Images/Samsung_A73_black.png"
     },	
 
 ];
