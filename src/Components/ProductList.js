@@ -1,45 +1,52 @@
 import React from 'react'
 import {PRODUCTS} from './Shared/Products';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
+import { Link } from 'react-router-dom';
+
+
 
 const productList = PRODUCTS;
 
+const handleClick = () =>{
+  console.log("Buy now");
+}
+
+
 export default function ProductList() {
+
+
   return (
-    <div>
-      <h1>Purchase your moblie Pone</h1>
-      <h1>Product Information</h1>
-      <div>
-        <Container>
-        
+    <>
+
+      <h1>Moblie Shopping Mall</h1>
+
+        <Container className='sm'>
         {
-            productList.map( (product)=> {
-            return(
-                <div>
-                    <Row xs="2">
-                    <Col className="bg-light border">
-                         <img src={product.images} alt="Girl in a jacket" width="500" height="600"></img>
-                    </Col>
-                    <Col className="bg-light border">
-                        <div id = {product.id}>
-                            <h1>{product.brand}</h1>
-                            <h1>{product.product}</h1>
-                            <h1>{product.color}</h1>
-                            <h1>{product.GB}</h1>
-                            <h1>{product.price}</h1>
-                        </div>
-                    </Col>
-                    </Row>
-                </div>
+          productList.map(product=>(
+            <div key = {product.id}>
+                <Row xs="2">
+                <Col className="bg-light border">
 
-            )
-            })
+            
+                 <Link to={"/ProductDetail/"+product.id} >
+                    <img src={process.env.PUBLIC_URL+'/'+product.images} alt={product.product} width="400" height="400"></img>
+                  </Link>
+                </Col>
+                <Col className="bg-light border">
+                
+                        <h1>{product.brand}</h1>
+                        <h3>{product.product}</h3>
+                        <h3>{product.color}</h3>
+                        <h3>{product.GB}</h3>
+                        <h3>{product.price}</h3>
+                    
+                </Col>
+                </Row>
+            </div>
+          ))
         }
-     
         </Container>
-
-      </div>
-    </div>
-  )
+      </>
+  );
 }

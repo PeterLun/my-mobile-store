@@ -49,7 +49,7 @@ export  const  PRODUCTS =
 	{
         "id": 5,
         "brand": "Apple",
-        "product": "iPhone 14",
+        "pidroduct": "iPhone 14",
         "color": "Purple",
         "GB": "256GB",
         "price": 7699,
